@@ -18,6 +18,10 @@ WORKDIR /src
 # This arg is passed by docker buildx & contains the target CPU architecture (e.g., amd64, arm64, etc.)
 ARG TARGETARCH
 
+ENV GOPRIVATE "git.dameng.com/*"
+ENV GOPROXY "http://192.168.115.208:8082/repository/goproxy/,direct"
+ENV GOSUMDB off
+
 ENV GOARCH=$TARGETARCH
 ENV CGO_ENABLED=0
 ENV GOBIN=/usr/local/bin

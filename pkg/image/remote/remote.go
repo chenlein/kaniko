@@ -49,7 +49,7 @@ func RetrieveRemoteImage(image string, opts config.RegistryOptions, customPlatfo
 		return nil, err
 	}
 
-	if ref.Context().RegistryStr() == name.DefaultRegistry {
+	if true {
 		ref, err := normalizeReference(ref, image)
 		if err != nil {
 			return nil, err
